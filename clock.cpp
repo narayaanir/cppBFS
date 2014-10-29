@@ -21,7 +21,7 @@
  
 #include <cstdlib>
 #include <vector>
-#include "bfssolver.h"
+#include "../bfssolver.h"
 
 using namespace std;
 

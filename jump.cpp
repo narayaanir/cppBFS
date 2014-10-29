@@ -23,7 +23,7 @@
 #include <fstream>
 #include <vector>
 #include <cstdlib>
-#include "bfssolver.h"
+#include "../bfssolver.h"
 
 using namespace std;
 
@@ -148,7 +148,7 @@ int main (int argc, char * args[]) {
 	if (argc!=3) {
 		cerr<<"2 args only."<<endl;
 	} else {
-		istream *isp;
+
 		ifstream ifs;
 //		ostream *osp;
 //		ofstream ofs;
@@ -156,13 +156,15 @@ int main (int argc, char * args[]) {
 		vector<char> vecstr;
 
 		if (args[1][0]=='-' && args[1][1]=='\0') {
+			istream *isp;
 			isp=&cin;
 		} else {
+			istream *isp;
 			ifs.open(args[1]);
 			isp = &ifs;
 			if (ifs.is_open()) {
 				char str;
-				int colSize, rowSize;
+				unsigned int colSize, rowSize;
 				bool leftRight=false, topDown=false, rightDiag=false, leftDiag=false;
 				while (ifs>>str) {
 //					cout<<str;

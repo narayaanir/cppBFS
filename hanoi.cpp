@@ -23,7 +23,7 @@
 #include <vector>
 #include <iomanip>
 #include <exception>
-#include "bfssolver.h"
+#include "../bfssolver.h"
 
 using namespace std;
 
